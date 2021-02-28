@@ -16,7 +16,11 @@ html {
 body {
   background-color: $bg-color;
   color: $text-color;
-  font: 1.6rem $font-family-sans;
+  font: 2rem $font-family-sans;
+}
+
+h1 {
+  margin: 16px 0;
 }
 
 form {
@@ -27,6 +31,11 @@ form {
   max-width: 280px;
   padding: 16px;
   width: 100%;
+
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .container {
