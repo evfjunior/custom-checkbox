@@ -66,36 +66,54 @@ input[type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
   margin: 0 16px;
-  height: 16px;
-  width: 16px;
-  border: 2px solid #6f6f6f;
-  border-radius: 2px;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
 }
 
 input[type="checkbox"] + label {
   color: #6f6f6f;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 input[type="checkbox"] + label:hover {
   color: #aeaeae;
 }
 
-input[type="checkbox"]:hover {
-  background-color: #00554d;
-  border: 2px solid #aeaeae;
+input[type="checkbox"]:hover::before {
+  color: #aeaeae;
 }
 
-input[type="checkbox"]:checked {
-  background-color: #0ba;
-  border: 2px solid #eee;
+input[type="checkbox"]:checked:hover:before {
+  color: #0ba;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\f14a";
+  color: #0ba;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 input[type="checkbox"]:checked + label {
   color: #0ba;
+}
+
+.icon {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon::before {
+  content: "\f0c8";
+  color: #6f6f6f;
+  font-size: 2rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */
