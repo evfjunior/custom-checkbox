@@ -2,6 +2,7 @@ input[type="checkbox"] {
   appearance: none;
   cursor: pointer;
   margin: 0 16px;
+  outline: none;
 
   + label {
     color: $text-unchecked;
@@ -12,11 +13,18 @@ input[type="checkbox"] {
     }
   }
 
+  &:focus {
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px $primary;
+    margin: 0 15px; // Keeps the label at the same place
+    padding: 0 1px;
+  }
+
   &:hover::before {
     color: $text-hovered;
   }
 
-  &:checked:hover:before {
+  &:checked:hover::before {
     color: $primary;
   }
 
